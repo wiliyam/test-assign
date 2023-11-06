@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colleges",
+  "info": {
+    "singularName": "college",
+    "pluralName": "colleges",
+    "displayName": "college",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student",
+      "mappedBy": "college"
+    },
+    "YearFounded": {
+      "type": "date"
+    },
+    "Rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 1
+    },
+    "Location": {
+      "type": "json"
+    },
+    "courses": {
+      "type": "json"
+    }
+  }
+}
